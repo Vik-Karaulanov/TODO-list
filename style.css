@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(45deg, rgba(177, 75, 197, 0.986), rgb(236, 222, 89));
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+main {
+  min-width: 400px;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 70px;
+  margin: 1rem;
+  margin-top: 10rem;
+  color: rgb(16, 78, 148);
+  user-select: none;
+}
+
+.input-container {
+  background-color: transparent;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todoForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#todo {
+  padding: 0 1rem;
+  outline: none;
+  border: none;
+  width: 80%;
+  line-height: 2rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+}
+
+.button {
+  user-select: none;
+  background-color: rgb(16, 78, 148);
+  width: 100px;
+  height: 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(16, 111, 219);
+}
+
+.button:focus {
+  outline: none;
+  border: 2px rgb(16, 111, 219) solid;
+}
+
+#add-todo-btn {}
+
+.removeBtn {
+  cursor: pointer;
+  font-size: 1rem;
+  color: rgb(16, 78, 148);
+  font-weight: bold;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0 1rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.removeBtn:hover {
+  color: rgb(58, 133, 219)
+}
+
+.removeBtn:focus {
+  outline: none;
+  border: 2px rgb(16, 111, 219) solid;
+}
+
+.tasks-container {
+  flex-direction: column;
+  color: gray;
+  width: 100%;
+  max-height: 50vh;
+  position: relative;
+  margin: 1rem;
+  overflow-x: auto;
+}
+
+.tasks-container::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb(16, 78, 148);
+}
+
+.tasks-container::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb(16, 78, 148);
+}
+
+.tasks-container::-webkit-scrollbar-thumb {
+  background-color: rgb(58, 133, 219)
+}
+
+.tasks-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.tasks-generator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.task {
+  padding: 1rem 0;
+  user-select: none;
+  width: 74%;
+  color: black;
+  overflow: hidden;
+  line-break: loose;
+}
+
+#clear {
+  align-self: flex-start;
+  margin-bottom: 50px;
+}
+
+.task-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 1rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.8s ease;
+  opacity: 1;
+}
+
+.task-container-done {
+  z-index: 999;
+  width: 0;
+  opacity: 0;
+}
+
+.done {
+  text-decoration: line-through;
+  color: lightgray;
+}
